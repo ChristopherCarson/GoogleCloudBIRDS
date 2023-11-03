@@ -1,9 +1,7 @@
 Run this from: 
 C:\Program Files (x86)\Google\Cloud SDK>
 
-gcloud functions deploy runScript --runtime nodejs16 --trigger-http --allow-unauthenticated --entry-point runScript --source C:\Users\chris\Documents\Repos\GoogleCloudBIRDS
+gcloud functions deploy runScript --runtime nodejs16 --trigger-http --memory 512MB --allow-unauthenticated --entry-point runScript --source C:\Users\chris\Documents\Repos\GoogleCloudBIRDS
 
 
 https://us-central1-cssconnections.cloudfunctions.net/runScript
-
-https://us-central1-cssconnections.cloudfunctions.net/runScript?script=salesreps
