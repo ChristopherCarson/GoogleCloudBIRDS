@@ -1,6 +1,6 @@
 const { exec } = require('child_process');
 
-exports.runScript = async (req, res) => {
+exports.runScript = async () => {
     // Define the command to run
     const command = `npx cross-env PLAYWRIGHT_BROWSERS_PATH=0 SCRIPT=salesreps MY_PASS=cxb*hna!jur4ntf9ZER npx playwright test ./tests --reporter=list`;
   
@@ -8,13 +8,11 @@ exports.runScript = async (req, res) => {
     exec(command, (error, stdout, stderr) => {
       if (error) {
         // Send a response with the error
-        // console.log(`exec error: ${error} ${stdout} ${stderr}`)
-        res.status(500).send({ error: `exec error: ${error} ${stdout} ${stderr}` });
+        console.log(`exec error: ${error} ${stdout} ${stderr}`)
         return;
       }
   
-      // Send a response with the command's output
-      res.status(200).send({ stdout, stderr });
+      console.log(`Success!: ${stdout}`)
     });
   };
 
