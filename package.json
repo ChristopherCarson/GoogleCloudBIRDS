@@ -1,0 +1,25 @@
+{
+  "name": "googlecloudbirds",
+  "version": "1.0.0",
+  "description": "README",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright test ./tests",
+    "postinstall": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright install chromium"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherCarson/GoogleCloudBIRDS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristopherCarson/GoogleCloudBIRDS/issues"
+  },
+  "homepage": "https://github.com/ChristopherCarson/GoogleCloudBIRDS#readme",
+  "dependencies": {
+    "@playwright/test": "^1.39.0",
+    "cross-env": "^7.0.3",
+    "one-time-password": "^0.1.6"
+  }
+}
