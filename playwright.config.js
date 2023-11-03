@@ -4,7 +4,7 @@ module.exports = {
     testDir: 'tests',
     timeout: 15 * 60 * 10000,
     reporter: [['html', { open: 'never' }]],
-    outputDir: "/tmp", // Disable test result output
+    outputDir: "/tmp/playwright", // Disable test result output
     use: {
       // ...
       screenshots: false,
