@@ -3,7 +3,7 @@ module.exports = {
     // Look for test files in the "tests" directory
     testDir: 'tests',
     timeout: 15 * 60 * 10000,
-    reporter: [['html', { open: 'never' }]],
+    reporter: [],
     outputDir: "/tmp/playwright", // Disable test result output
     use: {
       // ...

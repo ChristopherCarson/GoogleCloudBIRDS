@@ -2,8 +2,9 @@ const { test, expect } = require('@playwright/test')
 import * as OTP from 'one-time-password'
 
 test('test', async ({ page }) => {
-const script = process.env.SCRIPT;
-const password = process.env.MY_PASS;
+// const script = process.env.SCRIPT || 'invoicedetails';
+const script = process.env.SCRIPT || 'salesreps';
+const password = process.env.MY_PASS || 'cxb*hna!jur4ntf9ZER'
 
 await page.goto('https://vpn.bradyindustries.com/remote/login?lang=en')
 
@@ -24,7 +25,7 @@ const page1Promise = page.waitForEvent('popup')
 // Wait for the element to be visible
 await page1.waitForSelector('#c_pass', { state: 'visible' })
 
-await page1.locator('#c_pass').fill('cxb*hna!jur4ntf9ZER')
+await page1.locator('#c_pass').fill(password)
 await page1.getByRole('button', { name: 'Login' }).click()
 await page1.waitForTimeout(5000)
 

@@ -4,7 +4,7 @@
   "description": "README",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright test ./tests",
+    "test": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright test ./tests --reporter=list",
     "postinstall": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright install chromium"
   },
   "repository": {
