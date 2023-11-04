@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright test ./tests --reporter=list",
+    "test:headed": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright test ./tests --reporter=list --headed",
     "postinstall": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright install chromium"
   },
   "repository": {
