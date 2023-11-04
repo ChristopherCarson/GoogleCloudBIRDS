@@ -2,8 +2,8 @@ const { test, expect } = require('@playwright/test')
 import * as OTP from 'one-time-password'
 
 test('test', async ({ page }) => {
-// const script = process.env.SCRIPT || 'invoicedetails';
-const script = process.env.SCRIPT || 'salesreps';
+const script = process.env.SCRIPT || 'invoicedetails';
+// const script = process.env.SCRIPT || 'salesreps';
 const password = process.env.MY_PASS || 'cxb*hna!jur4ntf9ZER'
 
 await page.goto('https://vpn.bradyindustries.com/remote/login?lang=en')
