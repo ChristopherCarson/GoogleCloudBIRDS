@@ -2,9 +2,9 @@ const { test, expect } = require('@playwright/test')
 import * as OTP from 'one-time-password'
 
 test('test', async ({ page }) => {
-const script = process.env.SCRIPT || 'invoicedetails';
-// const script = process.env.SCRIPT || 'salesreps';
-const password = process.env.MY_PASS || 'cxb*hna!jur4ntf9ZER'
+//const script = process.env.SCRIPT || 'invoicedetails';
+const script = process.env.SCRIPT || 'salesreps';
+const password = process.env.MY_PASS || 'emh8ZUR5rvw4gtw_vgx'
 
 await page.goto('https://vpn.bradyindustries.com/remote/login?lang=en')
 
@@ -12,11 +12,11 @@ await page.getByPlaceholder('Username').fill('chris.carson@bradyindustries.com')
 await page.getByPlaceholder('Password').fill(password)
 await page.getByRole('button', { name: 'Login' }).click()
 
-const dummyKey = 'YGKNDUED5L3X34X4'
-const token = OTP.generate(dummyKey)
+// const dummyKey = 'YGKNDUED5L3X34X4'
+// const token = OTP.generate(dummyKey)
 
-await page.getByPlaceholder('Answer').fill(token)
-await page.getByRole('button', { name: 'Login' }).click()
+// await page.getByPlaceholder('Answer').fill(token)
+// await page.getByRole('button', { name: 'Login' }).click()
 
 const page1Promise = page.waitForEvent('popup')
   await page.getByRole('button', { name: ' BIRDS' }).click()
@@ -25,16 +25,17 @@ const page1Promise = page.waitForEvent('popup')
 // Wait for the element to be visible
 await page1.waitForSelector('#c_pass', { state: 'visible' })
 
+await page1.locator('#c_user').fill('chris.carson@bradyindustries.com')
 await page1.locator('#c_pass').fill(password)
 await page1.getByRole('button', { name: 'Login' }).click()
 await page1.waitForTimeout(5000)
 
-await page1.locator('#canvas').click({
-    position: {
-      x: 100,
-      y: 100
-    }
-  })
+// await page1.locator('#canvas').click({
+//     position: {
+//       x: 100,
+//       y: 100
+//     }
+//   })
 await page1.keyboard.press('Enter')
 
 await page1.waitForTimeout(30000)
