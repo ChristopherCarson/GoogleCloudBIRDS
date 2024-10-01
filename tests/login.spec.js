@@ -3,7 +3,8 @@ import * as OTP from 'one-time-password'
 
 test('test', async ({ page }) => {
 //const script = process.env.SCRIPT || 'invoicedetails';
-const script = process.env.SCRIPT || 'salesreps';
+// const script = process.env.SCRIPT || 'salesreps';
+const script = process.env.SCRIPT;
 const password = process.env.MY_PASS || 'emh8ZUR5rvw4gtw_vgx'
 
 await page.goto('https://vpn.bradyindustries.com/remote/login?lang=en')
@@ -50,7 +51,7 @@ await page1.keyboard.type(`cscript \\\\snapfs\\users\\Chris.Carson\\Querys\\SEND
 await page1.waitForTimeout(1000)
 await page1.keyboard.press('Enter')
 
-await page1.waitForTimeout(10 * 60 * 1000)
+await page1.waitForTimeout(20 * 60 * 1000)
 
 // You can add more assertions here if needed
 });
